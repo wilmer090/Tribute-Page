@@ -1,0 +1,213 @@
+*{
+	padding:0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body{
+	background: #171717;
+	font-family: 'Poppins', sans-serif;
+	color:#eeee;
+}
+main{
+	margin-left:30px;
+}
+.container{
+	padding:16px;
+	animation: transitionIn 0.75s;
+}
+
+.image-container{
+	margin-top:4rem;
+	display: flex;
+}
+.image-holder{
+	width: 60%;
+	text-align: center;
+	margin-right:10px;
+}
+.image-container img{
+	
+	width:100%;
+
+}
+.timeline_btn{
+	border:1px solid grey;
+	background: transparent;
+	color:#eeee;
+	font-family: 'Poppins', sans-serif;
+	font-size: 1rem;
+	padding:5px;
+	letter-spacing: 5px;
+	min-width: 200px;
+	text-transform: uppercase;
+	position: relative;
+	left:20%;
+	top:10%;
+}
+.timeline_btn:hover{
+	cursor: pointer;
+	background: #ffff;
+	color:black;
+	transition:ease-in-out 1s;
+}
+.timeline_btn:focus{
+	outline: none;
+}
+.book-authored{
+	width: 100%;
+	text-align: center;
+	margin-top:5rem;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+.book-authored .book-list{
+	width: 90%;
+	display: block;
+	margin: auto;
+}
+.book-authored .thumbnail{
+	width: 150px;
+	height: 200px;
+	margin:5px;
+}
+.thumbnail:hover{
+	cursor: pointer;
+}
+.side-info{
+	width: 40%;
+	margin:1rem;
+}
+.quote{
+	line-height: 2rem;
+}
+.side-info h1,.timelineAge{
+	text-align: center;
+	letter-spacing: 2px;
+}
+.side-info h1{
+	font-size: 5vw;
+	text-transform: uppercase;
+}
+
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+.timeline_list{
+	margin-left: 10%;
+	margin-right:11%;
+	margin-top:10%;
+}
+.timeline_list li{
+	padding: 10px;
+}
+
+@keyframes transitionIn{
+	from{
+		opacity: 0;
+		transform: rotateX(-10deg);
+	}
+	to{
+		opacity: 1;
+		transform: rotateX(0);
+	}
+
+}
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+ 
+}
+
+@media screen and (max-width: 440px){
+
+main{
+	margin: 0;
+}
+.image-container{
+	margin-top:4rem;
+	display: block;
+	text-align: left;
+ }
+.image-holder{
+	width: 100%;
+	text-align: center;
+	margin-right:5px;
+	}
+.side-info{
+	width:100%;
+	margin:0;
+	padding-left:5px;
+	padding-right: 5px;
+	}
+.timeline_btn{
+	border:1px solid grey;
+	background: transparent;
+	color:#eeee;
+	font-family: 'Poppins', sans-serif;
+	font-size: 1rem;
+	padding:5px;
+	margin-top:2rem;
+	margin-bottom: 2rem;
+	letter-spacing: 5px;
+	min-width: 200px;
+	text-transform: uppercase;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+.overlay .closebtn {
+ position: absolute;
+ top:-10px;
+ right:10px;
+	}
+}
+
